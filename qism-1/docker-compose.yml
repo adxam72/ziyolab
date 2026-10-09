@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: dtpi
+      POSTGRES_USER: dtpi
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD talab qilinadi}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - dtpi_pg:/var/lib/postgresql/data
+volumes:
+  dtpi_pg:

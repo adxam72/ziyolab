@@ -1,0 +1,254 @@
+FILE: ppt/diagrams/data1.xml
+
+1. Loyihaningdolzarbligivamaqsadi
+1.
+Loyihaning
+
+dolzarbligi
+
+va
+
+maqsadi
+
+
+2. DTPI Smart eduplatformasiningkonsepsiyasivaasosiyimkoniyatlari
+2. DTPI Smart
+edu
+
+platformasining
+
+konsepsiyasi
+
+va
+
+asosiy
+
+imkoniyatlari
+
+
+3. Loyihaningilmiy-innovatsionyangiligivaanaloglardanfarqi
+3.
+Loyihaning
+
+ilmiy-innovatsion
+
+yangiligi
+
+va
+
+analoglardan
+
+farqi
+
+
+4. Amalga oshirishstrategiyasi, jamoavaiqtisodiysamaradorligi
+4. Amalga
+oshirish
+
+strategiyasi
+,
+jamoa
+
+va
+
+iqtisodiy
+
+samaradorligi
+
+
+5. Kutilayotgannatijalarvarivojlanishistiqbollari
+5.
+Kutilayotgan
+
+natijalar
+
+va
+
+rivojlanish
+
+istiqbollari
+
+
+
+
+
+
+
+
+
+FILE: ppt/diagrams/data3.xml
+
+👨‍💻 1. Full-stack dasturchi - Web-platformavamobililovaningtexnikqisminiishlabchiqadi.
+👨‍💻 1.
+Full-stack
+dasturchi
+ - Web-
+platforma
+
+va
+
+mobil
+
+ilovaning
+
+texnik
+
+qismini
+
+ishlab
+
+chiqadi
+.
+
+
+🤖 2. AI/ML mutaxassisi - Sun’iyintellekt, NLP, adaptivta’limva RAG mexanizmlariniintegratsiyaqiladi.
+🤖 2.
+AI/ML
+mutaxassisi
+ -
+Sun’iy
+
+intellekt
+, NLP,
+adaptiv
+
+ta’lim
+
+va
+ RAG
+mexanizmlarini
+
+integratsiya
+
+qiladi
+.
+
+
+🔬 4. Ilmiymaslahatchi - Ilmiytadqiqot moduli vametodologikasosnishakllantiradi.
+🔬 4.
+Ilmiy
+
+maslahatchi
+ -
+Ilmiy
+
+tadqiqot
+ moduli
+va
+
+metodologik
+
+asosni
+
+shakllantiradi
+.
+
+
+🎨 5. UX/UI dizayner - Talabavao‘qituvchiuchunfoydalanishqulayliginita’minlaydi.
+🎨 5.
+UX/UI
+dizayner
+ -
+Talaba
+
+va
+
+o‘qituvchi
+
+uchun
+
+foydalanish
+
+qulayligini
+
+ta’minlaydi
+.
+
+
+👩‍🏫 3. Pedagog-metodist - Platformadagita’limalgoritmlariniilmiy-pedagogikjihatdanishlabchiqadi.
+👩‍🏫 3.
+Pedagog-metodist
+ -
+Platformadagi
+
+ta’lim
+
+algoritmlarini
+
+ilmiy-pedagogik
+
+jihatdan
+
+ishlab
+
+chiqadi
+.
+
+
+️ 6. Kiberxavfsizlikmutaxassisi - Foydalanuvchima’lumotlarinihimoyaqilishvaxavfsizliknita’minlaydi.
+️ 6.
+Kiberxavfsizlik
+
+mutaxassisi
+ -
+Foydalanuvchi
+
+ma’lumotlarini
+
+himoya
+
+qilish
+
+va
+
+xavfsizlikni
+
+ta’minlaydi
+.
+
+
+👨‍🏫 7. DTPI fan ekspertlari - Platformadagio‘quvmateriallarivatopshiriqlarniekspertizadano‘tkazadi.
+👨‍🏫 7.
+DTPI fan
+ekspertlari
+ -
+Platformadagi
+
+o‘quv
+
+materiallari
+
+va
+
+topshiriqlarni
+
+ekspertizadan
+
+o‘tkazadi
+.
+
+
+
+
+
+
+
+
+FILE: ppt/diagrams/data2.xml
+
+1 fakultet
+1
+fakultet
+
+
+Butun DTPI
+Butun
+ DTPI
+
+
+Barchata’limoluvchilar
+Barcha
+
+ta’lim
+
+oluvchilar
