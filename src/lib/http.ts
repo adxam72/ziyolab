@@ -36,6 +36,34 @@ export async function rateLimit(key: string, max: number, seconds: number) {
       "Juda ko‘p urinish. Birozdan so‘ng qayta urinib ko‘ring.",
     );
 }
+// Only log validated error codes; messages and adapter metadata can contain credentials.
+export function serverErrorDetails(error: unknown) {
+  const codes = new Set<string>();
+  const seen = new Set<object>();
+  function visit(value: unknown, depth: number) {
+    if (!value || typeof value !== "object" || depth > 5 || seen.has(value)) return;
+    seen.add(value);
+    const entry = value as Record<string, unknown>;
+    for (const key of ["code", "originalCode", "sqlState", "sqlstate"]) {
+      const code = entry[key];
+      if (typeof code === "string" && /^(?:P\d{4}|[0-9A-Z]{5}|ECONNREFUSED|ECONNRESET|ENOTFOUND|ETIMEDOUT|DEPTH_ZERO_SELF_SIGNED_CERT|SELF_SIGNED_CERT_IN_CHAIN|CERT_HAS_EXPIRED)$/.test(code)) codes.add(code);
+    }
+    for (const key of ["meta", "cause", "driverAdapterError", "error", "originalError"]) visit(entry[key], depth + 1);
+  }
+  visit(error, 0);
+  const hints: Record<string, string> = {
+    P1000: "Database authentication failed", "28P01": "Database authentication failed",
+    P1001: "Database server unreachable", ECONNREFUSED: "Database server unreachable",
+    ENOTFOUND: "Database hostname could not be resolved", ETIMEDOUT: "Database connection timed out",
+    P2021: "Required database table missing", "42P01": "Required database table missing",
+    P2022: "Required database column missing", "42703": "Required database column missing",
+    "42501": "Database role lacks permission", "3D000": "Database does not exist",
+    "53300": "Database connection limit reached", "23503": "Related database record missing",
+    DEPTH_ZERO_SELF_SIGNED_CERT: "Database TLS certificate rejected",
+    SELF_SIGNED_CERT_IN_CHAIN: "Database TLS certificate rejected", CERT_HAS_EXPIRED: "Database TLS certificate expired",
+  };
+  return { codes: [...codes], reason: [...codes].map(code => hints[code]).find(Boolean) ?? "Database or server operation failed" };
+}
 export function route(fn: (req: Request) => Promise<Response>) {
   return async (req: Request) => {
     try {
@@ -50,7 +78,7 @@ export function route(fn: (req: Request) => Promise<Response>) {
         );
       console.error(
         "Server operation failed",
-        e instanceof Error ? e.name : "Unknown",
+        JSON.stringify(serverErrorDetails(e)),
       );
       return NextResponse.json(
         { error: "Amal bajarilmadi. Qayta urinib ko‘ring." },
