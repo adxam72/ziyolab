@@ -7,6 +7,7 @@
   <title>ZiyoLab — Ilmdan natijaga</title>
   <style>
     :root{color-scheme:light;--ink:#152b39;--muted:#526772;--paper:#f5f7f3;--green:#146c57;--line:#dce4df}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}button,input{font:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:wait;opacity:.6}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #d58a2a;outline-offset:4px}.wrap{max-width:1180px;margin:auto;padding:0 28px}header{border-bottom:1px solid var(--line)}.nav{min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font-size:27px;font-weight:800;letter-spacing:-1px}.brand span{color:var(--green)}.navlinks{display:flex;align-items:center;gap:26px}.navlinks a{text-decoration:none}.small{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--green)}.hero{padding:85px 0 70px;display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:start}h1{font-size:clamp(40px,5vw,68px);line-height:1.08;letter-spacing:-3px;margin:20px 0 26px;max-width:620px}h1 em{font-style:normal;color:var(--green)}.lead{font-size:19px;color:var(--muted);max-width:520px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 22px;border-radius:10px;border:1px solid var(--green);background:var(--green);color:white;text-decoration:none;font-weight:650}.secondary{background:transparent;color:var(--green)}.path{border-top:1px solid var(--line);margin-top:44px;padding-top:20px;color:var(--muted);font-size:14px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 18px 50px #183a2810}.tabs{display:flex;gap:8px;margin-bottom:24px}.tab{flex:1;padding:10px 8px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--muted)}.tab[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink)}h2{font-size:25px;line-height:1.3;margin:0 0 10px}.hint{font-size:14px;color:var(--muted);margin:0 0 23px}label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}.field{margin-bottom:17px}input{width:100%;padding:12px 14px;border:1px solid #bdccc4;border-radius:9px;background:#fff;color:var(--ink)}form .btn{width:100%;margin-top:4px}.message{margin:12px 0 0;font-size:14px;color:#a02b2b;min-height:22px;overflow-wrap:anywhere}[hidden]{display:none!important}.modules{padding:36px 0 72px;border-top:1px solid var(--line)}.sectionhead{max-width:600px;margin-bottom:30px}.sectionhead h2{font-size:34px;letter-spacing:-1px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.module{padding:24px;border:1px solid var(--line);border-radius:15px;background:#fff}.number{display:block;color:var(--green);font-size:13px;font-weight:700;margin-bottom:18px}.module h3{margin:0;font-size:19px}.module p{color:var(--muted);font-size:14px;margin-bottom:0}.research{background:var(--ink);color:#fff;padding:40px;border-radius:18px;margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.research p{color:#c5d5d8;margin:10px 0 0;max-width:660px}.research a{white-space:nowrap;border-color:#bddeca;color:#bddeca}footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;gap:20px}@media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding:45px 0}.grid{grid-template-columns:1fr}.navlinks{gap:16px;font-size:14px}h1{letter-spacing:-2px}.research{display:block;padding:26px}.research a{margin-top:20px}footer .wrap{flex-direction:column;gap:5px}}@media(max-width:480px){.wrap{padding:0 18px}.nav{min-height:76px}.navlinks a:first-child{display:none}.card{padding:23px}.tabs{gap:5px}.tab{font-size:14px}}
+    .password-control{position:relative}.password-control input{padding-right:56px}.password-toggle{position:absolute;right:5px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:7px;background:transparent;color:var(--muted);cursor:pointer}.password-toggle:hover{background:var(--paper);color:var(--green)}.password-toggle:focus-visible{outline:2px solid var(--green);outline-offset:1px}
   </style>
 </head>
 <body>
@@ -20,8 +21,8 @@
         <form id="account-form">
           <div class="field" id="name-field" hidden><label for="name">Ism va familiya</label><input id="name" name="name" autocomplete="name" minlength="2" maxlength="100" disabled></div>
           <div class="field"><label for="email">Email manzilingiz</label><input id="email" name="email" type="email" autocomplete="username" maxlength="254" required></div>
-          <div class="field"><label for="password">Parol</label><input id="password" name="password" type="password" autocomplete="current-password" maxlength="128" required></div>
-          <div class="field" id="confirm-field" hidden><label for="confirmPassword">Parolni takrorlang</label><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="12" maxlength="128" disabled></div>
+          <div class="field"><label for="password">Parol</label><div class="password-control"><input id="password" name="password" type="password" autocomplete="current-password" maxlength="128" required><button class="password-toggle" id="password-toggle" type="button" aria-label="Parolni ko‘rsatish" aria-controls="password" aria-pressed="false"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18" hidden/></svg></button></div></div>
+          <div class="field" id="confirm-field" hidden><label for="confirmPassword">Parolni takrorlang</label><div class="password-control"><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="12" maxlength="128" disabled><button class="password-toggle" id="confirmPassword-toggle" type="button" aria-label="Parolni ko‘rsatish" aria-controls="confirmPassword" aria-pressed="false"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path class="eye-slash" d="m3 3 18 18" hidden/></svg></button></div></div>
           <button class="btn" id="submit" type="submit">Kirish</button><p class="message" id="message" role="status" aria-live="polite"></p>
         </form>
         <noscript><p>Shakldan foydalanish uchun JavaScript’ni yoqing yoki <a href="/kirish">kirish sahifasini oching</a>.</p></noscript>
@@ -41,11 +42,33 @@
     const submit = document.getElementById('submit');
     const loginTab = document.getElementById('login-tab');
     const registerTab = document.getElementById('register-tab');
+    function hidePasswords() {
+      for (const id of ['password', 'confirmPassword']) {
+        document.getElementById(id).type = 'password';
+        const button = document.getElementById(id + '-toggle');
+        button.setAttribute('aria-pressed', 'false');
+        button.setAttribute('aria-label', 'Parolni ko‘rsatish');
+        button.querySelector('.eye-slash').hidden = true;
+      }
+    }
+    for (const id of ['password', 'confirmPassword']) {
+      const input = document.getElementById(id);
+      const button = document.getElementById(id + '-toggle');
+      button.addEventListener('click', () => {
+        const visible = input.type !== 'text';
+        input.type = visible ? 'text' : 'password';
+        button.setAttribute('aria-pressed', String(visible));
+        button.setAttribute('aria-label', visible ? 'Parolni yashirish' : 'Parolni ko‘rsatish');
+        button.querySelector('.eye-slash').hidden = !visible;
+      });
+    }
+    hidePasswords();
     let registration = false;
     let busy = false;
     function setMode(register) {
       if (busy) return;
       registration = register;
+      hidePasswords();
       loginTab.setAttribute('aria-pressed', String(!register));
       registerTab.setAttribute('aria-pressed', String(register));
       for (const pair of [['name-field','name'],['confirm-field','confirmPassword']]) {
